@@ -12,7 +12,7 @@ import com.oracle.truffle.api.library.ExportMessage;
  * (and, in the tail position of a list, terminates the list).
  * For interop, it doubles as the {@code null} value.
  */ // TODO what about Z23, nothing? should that be the null value instead?
-@ExportLibrary(InteropLibrary.class)
+/* @ExportLibrary(InteropLibrary.class) */
 public final class ZNil extends ZList implements TruffleObject {
 
     /**
@@ -39,7 +39,7 @@ public final class ZNil extends ZList implements TruffleObject {
     /**
      * {@link ZNil} values are interpreted as null values by other languages.
      */
-    @ExportMessage
+    /* @ExportMessage */
     public boolean isNull() {
         return true;
     }
